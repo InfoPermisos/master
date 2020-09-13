@@ -21,7 +21,7 @@ from OtroGrupo import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('algo/', include('OtroGrupo.urls'))
+    path('algo/', include('OtroGrupo.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

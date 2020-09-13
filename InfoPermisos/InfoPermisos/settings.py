@@ -56,7 +56,7 @@ ROOT_URLCONF = 'InfoPermisos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/', 'OtroGrupo/OtroGrupoTemplates'],
+        'DIRS': ['templates/', 'OtroGrupo/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

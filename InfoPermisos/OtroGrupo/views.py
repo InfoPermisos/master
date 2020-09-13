@@ -16,15 +16,12 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-	#lista = Usuario.objects.all()
-	
+	return render(request, 'index.html', {})
 
-	return ("estas en el home")
 
 def login(request):
+	return render(request, 'login.html', {})
 
-	return ("estas en el login")
 
 def perfil(request):
-
-	return ("estas en el perfil")
+	return render(request, 'perfil.html', {})
