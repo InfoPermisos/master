@@ -1,25 +1,72 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+<head>
+	<title>Log in</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
+</head>
+<body style="background-image: url({% static 'img/fondo.jpg' %}); background-size: cover; background-attachment: fixed">
+		<div class="box">
+			<div style="align-self: center; height: 100%; text-align: center">
+			
+				<div style="text-align: center">
+					<a href="#"><img src="{% static 'img/logo.png' %}" style="width: 70%; height: 50%; position: relative; "></a>
+				</div>
+				<form method="POST" action="." style="width: 70%; position: absolute; left: 15%; top: 60%;"> {% csrf_token %}
+						
+						{{form.as_p}}
+						<input class="submit" type="submit" name="submit" value="iniciar sesión">
+				</form>
+				<input class="crearCuenta" type="submit" name="crearCuenta" value="-crear cuenta-">
+			</div>
+		</div>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<style type="text/css">
+		
+		.submit{
+			position: relative;
+			top: 0;
+			width:100%;
+			border-radius: 200px 200px 200px 200px;
+			-moz-border-radius: 200px 200px 200px 200px;
+			-webkit-border-radius: 200px 200px 200px 200px;
+			border: 0px solid #000000;
+			background-color: #555555;
+			color: #ffffff;
+			font-size: 1em;
+			padding: 0.5em;
+			left: 2%;
+			letter-spacing: 0.1em;
+			text-align: center;
+			transition: 0.3s;
+		}
+		
+		.submit:hover{
+			background-color: #444444;
+			top: -0.2em;
+			transition: 0.3s;
+			-webkit-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+			-moz-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+			box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+		}
 
-    <title>Log in</title>
-  </head>
-  <body>
-    <!-- Nav bar -->
+		.crearCuenta{
+			color: #555555;
+			font-weight: bolder; 
+			font-size: 1.1em; 
+			position: relative; top: 55%; 
+			background-color: transparent; 
+			border:0;
+			transition: 0.5s;
+		}
 
-    <!-- End Nav bar -->
-    <h1>Diseño de login</h1>
+		.crearCuenta:hover{
+			color: #666666;
+			letter-spacing: 0.1em;
+			transition: 0.5s;
+		}
+	</style>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
