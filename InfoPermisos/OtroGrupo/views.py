@@ -25,3 +25,7 @@ def login(request):
 
 def perfil(request):
 	return render(request, 'perfil.html', {})
+	
+
+def register(request):
+	return render(request, 'register.html', {})
