@@ -1,10 +1,72 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Log in</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
 </head>
-<body>
-	<h1>estas en login</h1>
+<body style="background-image: url({% static 'img/fondo.jpg' %}); background-size: cover; background-attachment: fixed">
+		<div class="box">
+			<div style="align-self: center; height: 100%; text-align: center">
+			
+				<div style="text-align: center">
+					<a href="#"><img src="{% static 'img/logo.png' %}" style="width: 70%; height: 50%; position: relative; "></a>
+				</div>
+				<form method="POST" action="." style="width: 70%; position: absolute; left: 15%; top: 60%;"> {% csrf_token %}
+						
+						{{form.as_p}}
+						<input class="submit" type="submit" name="submit" value="iniciar sesión">
+				</form>
+				<input class="crearCuenta" type="submit" name="crearCuenta" value="-crear cuenta-">
+			</div>
+		</div>
+
+	<style type="text/css">
+		
+		.submit{
+			position: relative;
+			top: 0;
+			width:100%;
+			border-radius: 200px 200px 200px 200px;
+			-moz-border-radius: 200px 200px 200px 200px;
+			-webkit-border-radius: 200px 200px 200px 200px;
+			border: 0px solid #000000;
+			background-color: #555555;
+			color: #ffffff;
+			font-size: 1em;
+			padding: 0.5em;
+			left: 2%;
+			letter-spacing: 0.1em;
+			text-align: center;
+			transition: 0.3s;
+		}
+		
+		.submit:hover{
+			background-color: #444444;
+			top: -0.2em;
+			transition: 0.3s;
+			-webkit-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+			-moz-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+			box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+		}
+
+		.crearCuenta{
+			color: #555555;
+			font-weight: bolder; 
+			font-size: 1.1em; 
+			position: relative; top: 55%; 
+			background-color: transparent; 
+			border:0;
+			transition: 0.5s;
+		}
+
+		.crearCuenta:hover{
+			color: #666666;
+			letter-spacing: 0.1em;
+			transition: 0.5s;
+		}
+	</style>
 
 </body>
 </html>
