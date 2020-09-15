@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.box{
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 5%, rgba(255,255,255,0.61) 42%, rgba(241,111,92,0.05) 95%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(5%, rgba(255,255,255,1)), color-stop(42%, rgba(255,255,255,0.61)), color-stop(95%, rgba(241,111,92,0.05)), color-stop(100%, rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 5%, rgba(255,255,255,0.61) 42%, rgba(241,111,92,0.05) 95%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 5%, rgba(255,255,255,0.61) 42%, rgba(241,111,92,0.05) 95%, rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 5%, rgba(255,255,255,0.61) 42%, rgba(241,111,92,0.05) 95%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 5%, rgba(255,255,255,0.61) 42%, rgba(241,111,92,0.05) 95%, rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f825532', endColorstr='#ffffff', GradientType=0 );
+	position: relative; 
+	height: 100%; 
+}
+
+.row{
+	float: left;
+
+}
+
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.submit{
+	width: 80%;
+	position: relative;
+	float: left;
+	top: 8%;
+	left: 10%;
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 0px solid #000000;
+	background-color: #555555;
+	color: #ffffff;
+	font-size: 1em;
+	padding: 1%;
+	letter-spacing: 0.1em;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.submit:hover{
+	background-color: #444444;
+	top: 7%;
+	transition: 0.3s;
+	-webkit-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+	box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+}
+
+.crearCuenta{
+	height: 10%;
+	position: relative;
+	float: left;
+	top: 10%; 
+	color: #555555;
+	font-weight: bolder; 
+	font-size: 1.1em; 
+	position: relative; 
+	background-color: transparent; 
+	border:0;
+	transition: 0.5s;
+}
+
+.crearCuenta:hover{
+	color: #666666;
+	letter-spacing: 0.1em;
+	transition: 0.5s;
+}
+
+.formulario{
+	width:80%; height: 2%; float: left; position: relative; left: 10%; top: 25%; padding: 1%; margin-top: 2%; border-radius: 200px 200px 200px 200px;-moz-border-radius: 200px 200px 200px 200px;-webkit-border-radius: 200px 200px 200px 200px;border: 0px solid #000000;font-size: 1em; text-align:center;
+}
+
+@media screen and (max-width: 370px){
+	*{
+		font-size: 12px;
+	}
+
+	.content{
+		height: 26em;
+	}
+
+	.box{
+		width: 70%;
+		left: 15%;
+	}
+
+	.crearCuenta{
+		width: 58%;
+		left: 21%;
+	}
+
+}
+
+
+@media screen and (min-width: 370px){
+	*{
+		font-size: 14px;
+	}
+	.content{
+		height: 30em;
+	}
+	.box{
+		width: 40%;
+		left: 30%;
+	}
+	.submit{
+		height: 15%;	
+	}
+	.crearCuenta{
+		width: 30%;
+		left: 35%;
+	}
+
+	.crearCuenta{
+		width: 42%;
+		left: 29%;
+	}
+}
+
+@media screen and (min-width: 600px){
+
+	.crearCuenta{
+		width: 54%;
+		left: 23%;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	*{
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 1900px){
+	*{
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 2500px){
+	.submit{
+		height: 17%;
+	}
+}
+
+@media screen and (min-width: 3000px){
+	.submit{
+		height: 20%;
+	}
+}
