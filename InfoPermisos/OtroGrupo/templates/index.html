@@ -1,10 +1,207 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Infopermisos</title>
-</head>
-<body>
-  <h1>INDEX A DESARROLLAR</h1>
-</body>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="{% static 'home/img/logo3.png' %}" type="image/png" />
+    <title>Info Permisos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/themify-icons.css' %}" />
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  </head>
+
+  <body>
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              <input
+                type="text"
+                class="form-control"
+                id="search_input"
+                placeholder="Search Here"
+              />
+              <button type="submit" class="btn"></button>
+              <span
+                class="ti-close"
+                id="close_search"
+                title="Close Search"
+              ></span>
+            </form>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">¿Quienes somos?</a>
+                </li>
+                
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Permisos</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Salir a correr</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Cruzar el puente</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Visitar a eña</a
+                      >
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/algo/login">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Registrarse</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================ Start Home Banner Area =================-->
+    <section class="home_banner_area">
+      <div class="banner_inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="banner_content text-center">
+                <p class="text-uppercase">
+                  <div style="text-align: center">
+                      <picture>
+                        <img src="{% static 'home/img/logo(1).png' %}" >                      
+                      </picture>
+                       <!-- -->     
+                <div>
+                 <!-- -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Home Banner Area =================-->
+
+    <!--================ Start Feature Area =================-->
+    <section class="feature_area section_gap_top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">Tipos de Permisos que podés Solicitar</h2>
+              <!-- -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-student"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Permiso para Salir a correr</h4>
+                <p>
+                  descripcion del permiso
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-book"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Permiso para cruzar el puente</h4>
+                <p>
+                  descripcion del permiso
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-earth"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Permiso para visitarle a Eña</h4>
+                <p>
+                  descripcion del permiso
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'home/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'home/js/popper.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'home/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'home/js/owl-carousel-thumb.min.js' %}"></script>
+    <script src="{% static 'home/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'home/js/mail-script.js' %}"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="{% static 'home/js/gmaps.min.js' %}"></script>
+    <script src="{% static 'home/js/theme.js' %}"></script>
+  </body>
 </html>
