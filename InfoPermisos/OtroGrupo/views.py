@@ -40,3 +40,6 @@ def perfil(request):
 
 def register(request):
 	return render(request, 'register.html', {})
+
+def solicitud(request):
+	return render(request, 'solicitud.html', {})
