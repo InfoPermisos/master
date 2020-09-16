@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
-from .forms import UsuarioForm
+from .forms import UsuarioForm, UserFormExtras
 
 #from django.shortcuts import render
 
@@ -39,4 +39,19 @@ def perfil(request):
 	
 
 def register(request):
-	return render(request, 'register.html', {})
+	if request.method == "POST":
+		form = UserFormExtras(request.POST)
+		if form.is_valid():
+			form.save()
+		else:
+			form = UserFormExtras()
+	else:
+		form = UserFormExtras()
+	context = {'form':form}
+
+
+	return render(request, 'register.html', context)
+
+
+def registro_exitoso(request):
+	return HttpResponse('Registro Exitoso')

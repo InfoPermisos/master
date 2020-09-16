@@ -1,0 +1,100 @@
+/* FUENTE */
+.font-poppins {
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+/* ================================================
+    #BOTON REGISTRAR
+*/
+
+.submit{
+    position: relative;
+    top: 0;
+    width:100%;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+    background-color: #555555;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em;
+    left: 2%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.submit:hover{
+    background-color: #444444;
+    top: -0.2em;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+    box-shadow: 0px 20px 25px -4px rgba(0,0,0,0.6);
+}
+
+/* ===================================================
+# Divs CARD del FORM
+*/
+.card {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: blue;
+}
+
+.card-4 {
+    background: rgb(218,247,255);
+    background: linear-gradient(90deg, rgba(218,247,255,1) 0%, rgba(74,155,255,1) 100%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-4 .card-body {
+    padding: 57px 65px;
+    padding-bottom: 65px;
+}
+
+@media (max-width: 767px) {
+    .card-4 .card-body {
+        padding: 50px 40px;
+    }
+}
+/* ==========================================================================
+ #PAGE WRAPPER
+========================================================================== */
+.page-wrapper {
+  min-height: 100vh;
+}
+/* ==========================================================================
+#WRAPPER
+========================================================================== */
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.wrapper--w780 {
+  max-width: 780px;
+}
+
+.wrapper--w680 {
+  max-width: 680px;
+}
+
+/* SPACING */
+.p-t-130 {
+  padding-top: 130px;
+}
+.p-b-100 {
+ padding-bottom: 100px;
+}
