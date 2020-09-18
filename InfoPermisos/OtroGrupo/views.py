@@ -56,6 +56,9 @@ def register(request):
 				return redirect('login')
 	return render(request, "register.html", {'form':form})
 
-
 def registro_exitoso(request):
-	return HttpResponse('Registro Exitoso')
+	return render(request, 'register.html', {})
+
+def solicitud(request):
+	return render(request, 'solicitud.html', {})
+
