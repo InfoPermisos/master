@@ -1,7 +1,11 @@
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout as hacer_logout
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth import login as hacer_login
+from .forms import UserFormExtras, MiAuthenticationForm
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import render
-from .forms import UsuarioForm, UserFormExtras
 
 #from django.shortcuts import render
 
@@ -19,6 +23,33 @@ def home(request):
 	return render(request, 'index.html', {})
 
 
+
+def login(request):
+    # Creamos el formulario de autenticación vacío
+	form = MiAuthenticationForm()
+	if request.method == "POST":
+        # Añadimos los datos recibidos al formulario
+		form = MiAuthenticationForm(data=request.POST)
+        # Si el formulario es válido...
+		if form.is_valid():
+            # Recuperamos las credenciales validadas
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password']
+
+            # Verificamos las credenciales del usuario
+			user = authenticate(username=username, password=password)
+
+            # Si existe un usuario con ese nombre y contraseña
+			if user is not None:
+                # Hacemos el login manualmente
+				hacer_login(request, user)
+                # Y le redireccionamos a la portada
+				return redirect('perfil')
+
+    # Si llegamos al final renderizamos el formulario
+	return render(request, "login.html", {'form': form})
+
+"""
 def login(request):
 	my_form = UsuarioForm()
 	if request.method == "POST":
@@ -32,26 +63,32 @@ def login(request):
 	}
 
 	return render(request, 'login.html', context)
-
+"""
 
 def perfil(request):
 	return render(request, 'perfil.html', {})
 	
 
 def register(request):
+	form = UserFormExtras()
+	form.fields['username'].help_text = None
+	form.fields['password1'].help_text = None
+	form.fields['password2'].help_text = None
 	if request.method == "POST":
-		form = UserFormExtras(request.POST)
+		form = UserFormExtras(data=request.POST)
 		if form.is_valid():
-			form.save()
-		else:
-			form = UserFormExtras()
-	else:
-		form = UserFormExtras()
-	context = {'form':form}
-
-
-	return render(request, 'register.html', context)
+			user = form.save()
+			if user is not None:
+				#hacer_login(request, user)
+				return redirect('login')
+	return render(request, "register.html", {'form':form})
 
 
 def registro_exitoso(request):
 	return HttpResponse('Registro Exitoso')
+
+
+def logout(request):
+	hacer_logout(request)
+    # Redireccionamos a la portada
+	return redirect('/')

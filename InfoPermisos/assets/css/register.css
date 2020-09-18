@@ -41,12 +41,11 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: blue;
+    background: #fff;
 }
 
 .card-4 {
-    background: rgb(218,247,255);
-    background: linear-gradient(90deg, rgba(218,247,255,1) 0%, rgba(74,155,255,1) 100%);
+    background: #C3E8EE;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
