@@ -58,4 +58,7 @@ def register(request):
 
 
 def registro_exitoso(request):
-	return HttpResponse('Registro Exitoso')
+	return render(request, 'register.html', {})
+
+def solicitud(request):
+	return render(request, 'solicitud.html', {})
