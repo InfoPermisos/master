@@ -329,7 +329,6 @@ button:focus {
   z-index: 1;
   min-height: 900px;
   position: relative;
-  background: url(../img/banner/fondo_2.jpg) no-repeat center;
   background-size: cover; }
   .home_banner_area .banner_inner {
     position: absolute;

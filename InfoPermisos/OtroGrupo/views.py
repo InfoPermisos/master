@@ -1,7 +1,11 @@
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout as hacer_logout
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+#from django.contrib.auth import login as hacer_login
+from .forms import UserFormExtras, UsuarioForm
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import render
-from .forms import UsuarioForm
 
 #from django.shortcuts import render
 
@@ -16,7 +20,7 @@ from .forms import UsuarioForm
 # Create your views here.
 
 def home(request):
-	return render(request, 'index.html', {})
+	return render(request, 'home.html', {})
 
 
 def login(request):
@@ -39,4 +43,19 @@ def perfil(request):
 	
 
 def register(request):
-	return render(request, 'register.html', {})
+	form = UserFormExtras()
+	form.fields['username'].help_text = None
+	form.fields['password1'].help_text = None
+	form.fields['password2'].help_text = None
+	if request.method == "POST":
+		form = UserFormExtras(data=request.POST)
+		if form.is_valid():
+			user = form.save()
+			if user is not None:
+				#hacer_login(request, user)
+				return redirect('login')
+	return render(request, "register.html", {'form':form})
+
+
+def registro_exitoso(request):
+	return HttpResponse('Registro Exitoso')
