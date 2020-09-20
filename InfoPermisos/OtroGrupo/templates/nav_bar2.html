@@ -1,0 +1,136 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="{% static 'navbar/img/logo3.png' %}" type="image/png" />
+    <title>Info Permisos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="{% static 'navbar/img/logo3.png' %}" type="image/png" />
+    <link rel="stylesheet" href="{% static 'navbar/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'navbar/css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'navbar/css/themify-icons.css' %}" />
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'navbar/css/style.css' %}" />
+  </head>
+
+  <body>
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+      <div class="main_menu">
+        <div class="search_input" id="search_input_box">
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              <!-- <input
+                type="text"
+                class="form-control"
+                id="search_input"
+                placeholder="Search Here"
+              />
+              <button type="submit" class="btn"></button> -->
+              <!-- <span
+                class="ti-close"
+                id="close_search"
+                title="Close Search"
+              ></span> -->
+            </form>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="index.html"
+              ><img  id= "logo" src="{% static 'navbar/img/logo2.png' %}" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+             <!--  <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> -->
+            <!-- -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">¿Quienes somos?</a>
+                </li>
+                
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Permisos</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Salir a correr</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Cruzar el puente</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Visitar a eña</a
+                      >
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Registrarse</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static  'navbar/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static  'navbar/js/popper.js' %}"></script>
+    <script src="{% static  'navbar/js/bootstrap.min.js' %}"></script>
+    <script src="{% static  'navbar/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static  'navbar/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static  'navbar/js/owl-carousel-thumb.min.js' %}"></script>
+    <script src="{% static  'navbar/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static  'navbar/js/mail-script.js' %}"></script>
+    <!--gmaps Js-->
+    <script src="{% static  'navbar/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE' %}"></script>
+    <script src="{% static  'navbar/js/gmaps.min.js' %}"></script>
+    <script src="{% static  'navbar/js/theme.js' %}"></script>  
+  </body>
+</html>

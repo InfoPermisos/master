@@ -1,0 +1,155 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoPermisos</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/permisor_revision.css' %}">
+	<link rel="stylesheet" href="{% static 'css/navBar.css' %}">
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body style="background-image: url({% static 'img/fondo_6.png' %}); background-attachment: fixed;">
+
+	<div class="navBar" id="navBar">
+		<!-- 
+			Diseño responsive, esta parte se ve solamente cuando el dispositivo en donde se presenta la pagina
+			es muy pequeño y oculta la barra de navegacion normal 
+		-->
+		<div class="sidepanelContenedor">
+			
+			<div id="sidepanel" class="sidepanel">
+			  <a href="javascript:void(0)" class="cerrarSidebar" onclick="closeNav()">&times;</a>
+			  <a class="selected" href="#">Revisar permisos</a>
+			  <a href="#">Buscar permisos</a>
+			  <!--<a href="#">Buscar ciudadano</a>-->
+			  <a href="#">Salir</a>
+			</div>
+			<div class="sidepanelNav">
+				<img src="{% static 'img/logo2.png' %}" alt="InfoPermisos" class="logo">
+				<button class="abrirSidebar" onclick="openNav()">&#9776;</button>
+			</div>
+		
+		</div>
+		<!-- 
+			Barra de navegacion default
+		-->
+		<div class="navContenedor">
+			
+			<nav class="">
+			    <ul>
+			        <li><a class="selected" href="#">Permisos a revisar</a></li><!--
+			     --><li><a  href="#">Buscar permisos</a></li><!--
+			     --><!--<li><a href="#">Buscar ciudadano</a></li>--><!--
+			     --><li><a href="#">Cerrar sesion</a></li>
+			    </ul>
+			</nav>
+
+		</div>
+
+	</div>
+	
+	<div class="contenido">
+		
+		<aside class="opciones">
+			<div class="titulo">
+				<h2>Permisos</h2>
+			</div>
+			<ul class="opcionesContenido">
+				<li><a class="selected" href="">Revision</a></li>
+				<li><a href="">Aprobados</a></li>
+				<li><a href="">Rechazados</a></li>
+				<li><a href="">Todos</a></li>
+			</ul>
+		</aside>
+		<div class="contenedorPermisos">
+			<div class="permisoBox">
+				<div class="informacion">
+
+					<div class="infoContent">
+
+						<h3 class="label">Tipo de permiso: </h3>
+						<p class="info">Visita medica</p>
+
+					</div>
+
+					<div class="infoContent">
+
+						<h3 class="label">Dni: </h3>
+						<p class="info">126540987</p>
+
+					</div>
+
+					<div class="infoContent">
+
+						<h3 class="label">Usuario: </h3>
+						<p class="info">Jose Alvarez</p>
+
+					</div>
+
+					<div class="boton">
+						<a class="btn">Mas detalle</a>
+					</div>
+				
+				</div>
+
+				
+				<div class="detalle">
+					<h3>Detalle</h3>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Animi nobis ipsum vitae nemo deserunt consequatur fuga sequi voluptate eaque. Inventore, labore! Explicabo quasi repellendus perspiciatis illum nobis odio quia ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+					</p>
+				</div>
+			</div>
+
+			<!------------------------------------------------------->
+
+			<div class="permisoBox">
+				<div class="informacion">
+
+					<div class="infoContent">
+
+						<h3 class="label">Tipo de permiso: </h3>
+						<p class="info">Visita medica</p>
+
+					</div>
+
+					<div class="infoContent">
+
+						<h3 class="label">Dni: </h3>
+						<p class="info">126540987</p>
+
+					</div>
+
+					<div class="infoContent">
+
+						<h3 class="label">Usuario: </h3>
+						<p class="info">Jose Alvarez</p>
+
+					</div>
+
+					<div class="boton">
+						<a class="btn">Mas detalle</a>
+					</div>
+				
+				</div>
+
+				
+				<div class="detalle">
+					<h3>Detalle</h3>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Animi nobis ipsum vitae nemo deserunt consequatur fuga sequi voluptate eaque. Inventore, labore! Explicabo quasi repellendus perspiciatis illum nobis odio quia ullam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="{% static 'js/permisor_general.js' %}"></script>
+
+</script>
+
+</html>
