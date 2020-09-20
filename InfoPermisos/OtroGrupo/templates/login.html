@@ -8,28 +8,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body style="background-image: url({% static 'img/fondo_1.jpg' %}); background-size: cover; background-attachment: fixed">
-		<div class="content" style="width: 100%;">
+<body id="pagina" style="background-image: url({% static 'img/fondo_1.jpg' %}); background-size: cover; background-attachment: fixed">
+		<div class="content">
 			<div class="box">
 
 				<div class="logoContenedor">
-					<a href="#">
-						<img class="logo" src="{% static 'img/logo_2.png' %}">
-					</a>
+					<div class="logoContenedor2">
+						<a href="#">
+							<img class="logo" src="{% static 'img/logo_2.png' %}">
+						</a>
+					</div>
 				</div>
 				
 				<div class="formularioContenedor">
 					<form class="form" method="POST" action="." >{% csrf_token %}
-
-							{{form.as_p}}
+							{{form}}
 							<input class="submit" type="submit" name="submit" value="iniciar sesion">
 					</form>
-					<div class="crearCuentaContenedor">
-						<input class="crearCuenta" type="submit" name="crearCuenta" value="-crear cuenta-">			
+					<div id="submitCont" class="crearCuentaContenedor">
+						<input id="submit" class="crearCuenta" type="submit" name="crearCuenta" value="-crear cuenta-">			
 					</div>
 				</div>
 			</div>
 		</div>
+
+	<script>
+		body = document.getElementById("pagina");
+		console.log("Height: ", screen.height, " || Width", screen.width);
+		console.log("Body_Height: ", body.style.height, " || Body_Width", body.style.width);
+		if (screen.width < screen.height) {
+			console.log("No es desktop");
+			x = document.getElementById("submitCont");
+			y = document.getElementById("submit");
+			x.style.position = "relative";
+			x.style.top = ""+(screen.height * 0.45)+"px";
+		}else{
+			console.log("Es desktop");
+		}
+	</script>
 
 </body>
 </html>
