@@ -1,0 +1,227 @@
+.navBar{
+	height: 3.5em;
+	width: 100%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	transition: .5s;
+	z-index: 1;
+	border-bottom: 0.2em solid rgba(0,0,0.5);
+}
+
+/*------------------------------------------------------------------------- Barra de navegacion ----*/
+
+.navBar .navContenedor{
+	float: left;
+	background-color: rgba(255,255,255,.5);
+	transition: .5s;
+}
+
+.navBar .navContenedor{
+	height: 100%;
+	width: 100%;
+}
+
+.navBar .navContenedor nav{
+	height: 100%;
+	width: 100%;
+}
+
+.navBar .navContenedor nav ul{
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.navBar .navContenedor nav ul li{
+	width: 20%;
+	height: 100%;
+	padding-top: 1.5%;
+	text-align: center;
+	transition: .5s;
+}
+
+.navBar .navContenedor nav ul li a{
+	font-weight: bolder;
+	color: #000;
+	transition: .5s;
+}
+
+/*-- scrolled navbar --*/
+
+.navBar.scrolled{
+	height: 3em;
+	position: sticky;
+	top: 0;
+}
+
+.navBar.scrolled .navContenedor {
+	background-color: rgba(255,255,255,1);
+}
+
+.navBar.scrolled .navContenedor nav ul li{
+	padding-top: 1%;
+}
+
+/*-- hovers navbar --*/
+.navBar .navContenedor nav ul li a:hover{
+	letter-spacing: 0.1em;
+	color: #fdc632;
+}
+
+/*estilo para el link en el que se encuentra*/
+.navBar .navContenedor nav ul li a.selected{
+	letter-spacing: 0.1em;
+	color: #fdc632;
+}
+
+ /*------------------------------------------------------------------------- SIDEPANEL ----
+
+ Diseño responsive, esta parte se ve solamente cuando el dispositivo en donde
+ se presenta la pagina es muy pequeño y oculta la barra de navegacion normal
+ */
+.navBar .sidepanelContenedor{
+	float: left;
+	background-color: rgba(255,255,255,.6);
+}
+
+.navBar .sidepanelContenedor .sidepanelNav{
+	width: 100%;
+	height: 100%;
+}
+
+.navBar .sidepanelContenedor .sidepanelNav img.logo{
+	float: right;
+	height: 100%;
+	width: 60%;
+	transition: .5s;
+}
+
+
+.navBar.scrolled .sidepanelContenedor {
+	background-color: rgba(255,255,255,1);
+}
+
+.navBar.scrolled .sidepanelContenedor .sidepanelNav img.logo{
+	padding-left: 1em;
+}
+
+.navBar .sidepanelContenedor .sidepanel {
+  height: 250px;
+  width: 0px;
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s; 
+}
+
+.navBar .sidepanelContenedor .sidepanel a {
+  padding: 8px 8px 8px 32px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.navBar .sidepanelContenedor .sidepanel .selected{
+	color: #f1f1f1;
+}
+
+.navBar .sidepanelContenedor .sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+
+
+.navBar .sidepanelContenedor .sidepanel .cerrarSidebar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.navBar .sidepanelContenedor .sidepanelNav .abrirSidebar {
+  font-size: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 40%;
+  height: 100%;
+  color: #000;
+  text-align: left;
+  padding-left: 3%;
+}
+
+/*------------------------------------------------------------------------- MEDIA
+
+	Con @media se realiza el diseño responsive de la pagina
+*/
+
+@media screen and (max-width: 315px){
+	.navBar .sidepanelContenedor{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.navBar .sidepanelContenedor .sidepanelNav img.logo{
+		display: none;
+	} 
+	.navBar .navContenedor{
+		width: 0%;
+		height: 0%;
+		display: none;
+	}
+}
+
+@media screen and (min-width: 315px){
+	.navBar .sidepanelContenedor{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.navBar .sidepanelContenedor .sidepanelNav img.logo{
+		display: block;
+	}
+	.navBar .navContenedor{
+		width: 0%;
+		height: 0%;
+		display: none;
+	}
+}
+
+@media screen and (min-width: 400px){
+	.navBar .sidepanelContenedor .sidepanelNav img.logo{
+		width: 50%;
+		margin-left: 1%;
+	}
+}
+
+@media screen and (min-width: 550px){
+	.navBar .sidepanelContenedor .sidepanelNav img.logo{
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 700px){
+	.navBar .sidepanelContenedor .sidepanelNav img.logo{
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.navBar .sidepanelContenedor{
+		width: 0%;
+		height: 0%;
+		display: none;
+	}
+	.navBar .navContenedor{
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+}

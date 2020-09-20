@@ -1,0 +1,192 @@
+*{
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
+
+
+
+/*------------------------------------------------------------------------- CONTENIDO 
+
+	A partir de aqui se define el contenido de pagina
+*/
+.contenido{
+	padding: 5% 1% 1% 2%;
+	height: 70em;
+	width: 100%;
+}
+
+/******************************************************** Contenedor de un permiso*/
+
+.contenido .pedidoPermiso{
+	float: left;
+	position: relative;
+	width: 85%;
+	height: 25%;
+	left: 7.5%;
+	background-color: #fefefe;
+	padding: 1%;
+	margin-top: 2%;
+
+}
+
+
+/******************************************************** DETALLE
+	Parte del contenido de un permiso en donde
+	el usuario puede detallar la razon del porque
+	necesita el pedido solicitado
+*/
+
+.contenido .pedidoPermiso .detalle{
+	float: left;
+	width: 60%;
+	height: 100%;
+	display: block;
+}
+
+.contenido .pedidoPermiso .detalleCont.label{
+	height: 25%;
+	width: 100%;
+	text-align: center;
+}
+
+.contenido .pedidoPermiso .detalleCont.content{
+	height: 65%;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+/****************************************** INFORMACION
+
+	Parte del contenido en donde se presenta
+	la informacion del usuario y el boton
+	"Revisar pedido"
+*/
+
+.contenido .pedidoPermiso .informacion{
+	float: left;
+	width: 40%;
+	/*height: 100%;*/
+	height: 75%;
+}
+
+.contenido .pedidoPermiso .informacion .infoContenedor{
+	float: left;
+	width: 100%;
+	height: 33%;
+	display: flex;
+	padding-left: 3%;
+}
+
+.contenido .pedidoPermiso .informacion .infoContenedor .label{
+	font-size: 1.2em;
+}
+
+.contenido .pedidoPermiso .informacion .infoContenedor .info{
+	font-size: 1.2em;
+	vertical-align: center;
+	margin-left: 1.5%;
+}
+
+
+/******************************************************** BOTON
+	Boton "Revisar pedido"
+*/
+
+.contenido .pedidoPermiso .boton{
+	float: left;
+	position: relative;
+	background-color: #f0f0f0;
+	border: none;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	border: 0px solid #000000;
+	transition: .3s;
+	width: 40%;
+	height: 25%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.contenido .pedidoPermiso .boton .btn{
+	height: 100%;
+	width: 100%;
+	font-weight: bolder;
+	vertical-align: middle;
+}
+
+.contenido .pedidoPermiso .boton:hover{
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	top: -1%;
+	transition: .3s;
+}
+
+/******************************************* Efecto boton
+	efecto del boton cuando se hace click	
+
+*/
+
+.contenido .pedidoPermiso .boton:active{
+	background-color: rgba(255,255,255,1);
+	letter-spacing: 0.05em;
+}
+
+/*------------------------------------------------------------------------- MEDIA
+
+	Con @media se realiza el diseño responsive de la pagina
+*/
+
+
+@media screen and (min-width: 480px){
+	.contenido .pedidoPermiso{
+		border-radius: 30px 30px 30px 30px;
+		-moz-border-radius: 30px 30px 30px 30px;
+		-webkit-border-radius: 30px 30px 30px 30px;
+		border: 0px solid #000000;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.contenido{
+		height: 140em;
+	}
+	.contenido .pedidoPermiso{
+		width: 95%;
+		left: 2.5%;
+	}
+	.contenido .pedidoPermiso .informacion{
+		width: 100%;
+		height: 40%;
+		text-align: center;
+	}
+	.contenido .pedidoPermiso .detalle{
+		width: 100%;
+		height: 49%;
+		margin-top: 1%;
+		text-align: center;
+	}
+	.contenido .pedidoPermiso .boton{
+		width: 100%;
+		height: 9%;
+		margin-bottom: 1%;
+		align-self: center;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.contenido .pedidoPermiso .informacion .infoContenedor{
+		display: block;
+	}
+}

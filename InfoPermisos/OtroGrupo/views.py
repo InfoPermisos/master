@@ -61,3 +61,12 @@ def registro_exitoso(request):
 
 def solicitud(request):
 	return render(request, 'solicitud.html', {})
+
+def permisor_general(request):
+	return render(request, 'permisor_general.html', {})
+
+def permisor_revision(request):
+	return render(request, 'permisor_revision.html', {})
+
+def permisor_masDetalles(request):
+	return render(request, 'permisor_masDetalles.html', {})

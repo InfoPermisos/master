@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/permisor_masDetalles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'iconos/style.css' %}">
+	<title>InfoPermisos</title>
+</head>
+<body style="background-image: url({% static 'img/fondo_1.png' %}); background-attachment: fixed; background-repeat: repeat;">
+	<div class="navBar">
+		<nav>
+			<a href="http://127.0.0.1:8000/algo/permisor/revision">
+				<h2 class="icon-double_arrow icono-flecha" style="transform: rotate(180deg);"></h2>
+				<h2>Volver</h2>		
+			</a>
+		</nav>
+	</div>
+	<div id="contenedor" class="contenedor">
+		<div class="contenido">
+			<div class="usuario content">
+				<h3 class="usuario label">Usuario:</h3>
+				<h3 class="usuario info">Jorge Lopez</h3>
+			</div>
+			<div class="email content">
+				<h2 class="email label">Email:</h2>
+				<h2 class="email info">JorgeLopez@mail.com</h2>
+			</div>
+			<div class="dni content">
+				<h2 class="dni label">Dni:</h2>
+				<h2 class="dni info">45897631</h2>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		if(screen.height < screen.width){document.getElementById("contenedor").style.height = (screen.height * 0.75) + "px";}
+		else{document.getElementById("contenedor").style.height = (screen.height * 0.85) + "px";}
+	</script>
+</body>
+
+</html>

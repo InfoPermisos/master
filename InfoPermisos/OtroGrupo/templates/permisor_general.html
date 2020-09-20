@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InfoPermisos</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/permisor_general.css' %}">
+	<link rel="stylesheet" href="{% static 'css/navBar.css' %}">
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body style="background-image: url({% static 'img/fondo_6.png' %}); background-attachment: fixed;">
+
+	<div class="navBar" id="navBar">
+		<!-- 
+			Diseño responsive, esta parte se ve solamente cuando el dispositivo en donde se presenta la pagina
+			es muy pequeño y oculta la barra de navegacion normal 
+		-->
+		<div class="sidepanelContenedor">
+			
+			<div id="sidepanel" class="sidepanel">
+			  <a href="javascript:void(0)" class="cerrarSidebar" onclick="closeNav()">&times;</a>
+			  <a href="#">Revisar permisos</a>
+			  <a class="selected" href="#">Buscar permisos</a>
+			  <a href="#">Buscar ciudadano</a>
+			  <a href="#">Salir</a>
+			</div>
+			<div class="sidepanelNav">
+				<img src="{% static 'img/logo2.png' %}" alt="InfoPermisos" class="logo">
+				<button class="abrirSidebar" onclick="openNav()">&#9776;</button>
+			</div>
+		
+		</div>
+		<!-- 
+			Barra de navegacion default
+		-->
+		<div class="navContenedor">
+			
+			<nav class="">
+			    <ul>
+			        <li><a href="#">Permisos a revisar</a></li><!--
+			     --><li><a class="selected" href="#">Buscar permisos</a></li><!--
+			     --><li><a href="#">Buscar ciudadano</a></li><!--
+			     --><li><a href="#">Cerrar sesion</a></li>
+			    </ul>
+			</nav>
+
+		</div>
+
+	</div>
+	
+	<!-- Contenido de la pagina -->
+	<div class="contenido">
+		
+		<!-- Contenedor de una solicitud de permiso -->	
+		<div class="pedidoPermiso">
+			<!--
+				DETALLE
+					Parte del permiso de un permiso en donde el usuario puede detallar 
+					la razon del porque necesita el pedido solicitado
+			-->
+			<div class="detalle">
+				<div class="label detalleCont">
+					<h2>Detalle</h2>
+				</div>
+				<div class="content detalleCont">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Asperiores praesentium provident nobis sapiente architecto unde repudiandae dicta. Accusamus magnam blanditiis aliquam debitis error, iure temporibus provident tempora, repudiandae, incidunt cupiditate!
+				</div>	
+			</div>
+			<!-- 
+				Informacion
+					Parte del permiso en donde se presenta la 
+					informacion del usuario y el boton	"Revisar pedido"
+			-->
+			<div class="informacion">
+				<!-- TipoPermiso -->
+				<div class="infoContenedor tipoPermiso">
+					<h2 class="label">Tipo de permiso:</h2>
+					<p class="info">Caminar</p>
+				</div>
+				<!-- Dni -->
+				<div class="infoContenedor dni">
+					<h2 class="label">Dni:</h2>
+					<p class="info">58639147</p>
+				</div>
+				<!-- Usuario -->
+				<div class="infoContenedor usuario">
+					<h2 class="label">Usuario:</h2>
+					<p class="info">Raul Nicolas Alvarez Conti</p>
+				</div>
+				<!-- Boton 
+				<div class="boton">
+					<button class="btn">Revisar pedido</button>
+				</div>-->
+			</div>
+			<!-- Boton -->	
+			<div class="boton">
+				<button class="btn">Revisar pedido</button>
+			</div>
+		</div>
+
+		<!-- Contenedor de una solicitud de permiso -->	
+		<div class="pedidoPermiso">
+			<!--
+				DETALLE
+					Parte del contenedor de un permiso en donde el usuario puede detallar 
+					la razon del porque necesita el pedido solicitado
+			-->
+			<div class="detalle">
+				<div class="label detalleCont">
+					<h2>Detalle</h2>
+				</div>
+				<div class="content detalleCont">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veritatis, ad nam praesentium obcaecati eveniet soluta vel dolore velit porro ducimus totam incidunt molestiae natus distinctio corrupti neque saepe sint.
+
+				</div>	
+			</div>
+			<!-- 
+				Informacion
+					Parte del contenedor en donde se presenta la 
+					informacion del usuario y el boton	"Revisar pedido"
+			-->
+			<div class="informacion">
+				<!-- TipoPermiso -->
+				<div class="infoContenedor tipoPermiso">
+					<h2 class="label">Tipo de permiso:</h2>
+					<p class="info">Visita medica</p>
+				</div>
+				<!-- Dni -->
+				<div class="infoContenedor dni">
+					<h2 class="label">Dni:</h2>
+					<p class="info">98123456</p>
+				</div>
+				<!-- Usuario -->
+				<div class="infoContenedor usuario">
+					<h2 class="label">Usuario:</h2>
+					<p class="info">Jorge Lucas Altamirano</p>
+				</div>
+			</div>
+			<!-- Boton -->
+				<div class="boton">
+					<button class="btn">Revisar pedido</button>
+				</div>
+		</div>
+	</div>
+	
+
+</body>
+<script type="text/javascript" src="{% static 'js/permisor_general.js' %}"></script>
+
+</html>

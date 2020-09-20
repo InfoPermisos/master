@@ -1,0 +1,328 @@
+:root{
+	--colorPrimario: #ff6034;
+	--colorSecundario: #ffcd3c;
+	--colorFondo: #cfcfc8;
+}
+
+*{
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	color: #000;
+}
+/******************************************************************************************* CONTENIDO*/
+.contenido{
+	width: 100%; 
+	height: 70em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenido .opciones{
+	width: 15%;
+	height: 100%;
+	background-color: rgba(255,255,255,.5);
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	padding-top: 5%;
+	flex-flow: column;
+}
+
+.contenido .opciones .titulo{
+	font-size: 1.5rem;
+	height: 10%;
+	text-decoration: underline;
+	color: var(--colorPrimario);
+}
+
+.contenido .opciones .titulo h2{
+	letter-spacing: .1rem;
+}
+
+.cotenido .opciones .opcionesContenido{
+	height: 90%;
+}
+
+.contenido .opciones ul.opcionesContenido li{
+	margin-top: 5%;
+	height: 40%;
+	width: 100%;
+	vertical-align: middle;
+	font-size: 1.2rem;
+	letter-spacing: .1rem;
+}
+
+.contenido .opciones ul.opcionesContenido li a{
+	transition: .3s;
+}
+
+.contenido .opciones ul.opcionesContenido li a:hover{
+	color: var(--colorSecundario);
+	letter-spacing: .2rem;
+}
+
+.contenido .opciones ul.opcionesContenido li a.selected{
+	color: var(--colorSecundario);
+	letter-spacing: .2rem;
+}
+
+.contenido .contenedorPermisos{
+	width: 85%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenido .contenedorPermisos .permisoBox{
+	margin-top: 5%;
+	width: 90%;
+	height: 15%;
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	border: 0px solid #000000;
+	background-color: var(--colorFondo);
+}
+
+/*************************************************************************** DETALLE*/
+
+.contenido .contenedorPermisos .permisoBox .detalle{
+	width: 60%;
+	height: 100%;
+	text-align: center;
+	padding: 1% 1% 1% 1%;
+	overflow: hidden;
+}
+
+.contenido .contenedorPermisos .permisoBox .detalle h3{
+	width: 100%;
+	height: 15%;
+	color: var(--colorPrimario);
+}
+
+.contenido .contenedorPermisos .permisoBox .detalle p{
+	width: 95%;
+	height: 85%;
+	overflow: hidden;
+}
+
+
+/*************************************************************************** INFORMACION*/
+
+.contenido .contenedorPermisos .permisoBox .informacion{
+	width: 40%;
+	height: 100%;
+	padding: 1% 1% 1% 1%;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: column;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .infoContent{
+	width: 100%;
+	height: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .infoContent h3.label,p.info{
+	font-size: 1.2em;
+	display: inline;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .infoContent h3.label{
+	color: var(--colorPrimario);
+	margin-right: 1%;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .boton{
+	width: 100%;
+	height: 25%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .boton .btn{
+	width: 80%;
+	height: 100%;
+	position: relative;
+	top: 10%;
+	background-color: #f6f6f6;
+	color: #000;
+	font-weight: bolder;
+	font-size: 1.2em;
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	border: 0px solid #000000;
+	transition: .3s;
+	text-align: center;
+	padding-top: 2%;
+	cursor: pointer;
+}
+
+.contenido .contenedorPermisos .permisoBox .informacion .boton .btn:hover{
+	background-color: #f8f8f8;
+	top: 0;
+	letter-spacing: .07rem;
+}
+
+/*************************************************************************** MEDIA*/
+@media screen and (max-width: 600px){
+	.contenido .opciones .titulo{
+		display: none;
+	}
+	.contenido .opciones .opcionesContenido{
+		margin-top: 3%;
+	}
+
+}
+
+@media screen and (min-width: 700px){
+	.contenido .opciones .titulo{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contenido{
+		width: 100%; 
+		height: 70em;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.contenido .opciones{
+		width: 100%;
+		height: 8em;
+		order: 1;
+		flex-flow: column;
+		font-size: 1.5rem
+	}
+
+	.contenido .opciones .titulo{
+		width: 100%;
+		height: 20%;
+		font-size: 1.2rem;
+	}
+	
+	.contenido .opciones .opcionesContenido{
+		width: 100%;
+		height: 80%;
+		padding-top: 5%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: row wrap;
+	}
+
+	.contenido .opciones ul.opcionesContenido li{
+		margin: 0;
+		padding: 0;
+		height: 50%;
+		width: 45%;
+		margin-left: 2.5%;
+		margin-right: 2.5%:;
+	}
+
+	.contenido .contenedorPermisos{
+		width: 100%;
+		height: 100%;
+		order: 2;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px){
+
+	.contenido{
+		width: 100%; 
+		height: 70em;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.contenido .opciones{
+		width: 100%;
+		height: 8em;
+		order: 1;
+		flex-flow: column;
+		font-size: 1.5rem
+	}
+
+	.contenido .contenedorPermisos{
+		width: 100%;
+		height: 100%;
+		order: 2;
+	}
+
+	.contenido .opciones .titulo{
+		width: 100%;
+		height: 20%;
+	}
+
+	.contenido .opciones .opcionesContenido{
+		width: 100%;
+		height: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: row;
+		justify-content: center;
+		vertical-align: middle;
+	}
+
+	.contenido .opciones .opcionesContenido li{
+		vertical-align: middle;
+		height: 100%;
+		width: 25%;
+		margin-left: 2.5%;
+		margin-right: 2.5%:;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+	.contenido .contenedorPermisos .permisoBox{
+		height: 27%;
+		flex-flow: column;
+	}
+
+	.contenido .contenedorPermisos .permisoBox .detalle{
+		order: 1;
+		width: 100%;
+		height: 60%;
+	}
+
+	.contenido .contenedorPermisos .permisoBox .informacion{
+		order: 2;
+		width: 100%;
+		height: 40%;
+	}
+
+	.contenido .contenedorPermisos .permisoBox .informacion{
+		padding-bottom: 2%;
+	}
+
+	.contenido .contenedorPermisos .permisoBox .informacion .boton{
+		height: 27%;
+	}
+	.contenido .contenedorPermisos .permisoBox .informacion .boton .btn{
+		padding-top: .2%;
+	}
+}
