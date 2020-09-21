@@ -2,7 +2,9 @@
 :root{
 	--colorPrimario: #2381da;
 	--colorPrimarioHover: #3492eb;
-	--fondoColor: #a6a6a6;
+	--fondoColor: transparent;
+	--colorAceptar: #66ff66;
+	--colorRechazar: #ff6666;
 }
 
 *{
@@ -10,6 +12,7 @@
 	padding: 0;
 	text-decoration: none;
 	box-sizing: border-box;
+	outline: none;
 }
 
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-INFORMACION-GENERAL-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
@@ -52,6 +55,8 @@
 
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-BARRA-DE-NAVEGACION-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv-CONTENIDO-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
 .contenedor{
 	width: 100%;
 }
@@ -65,16 +70,16 @@
 }
 
 .contenedor .contenido .content{
-	width: 100%;
+	width: 33%;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: row;
 	flex-wrap: wrap;
 	font-size: 120%;
-	padding: 3% 1%
+	padding: 3% 1%;
+	justify-content: center;
 }
 
 .contenedor .contenido .content .label{
-	width: 40%;
 	color: var(--colorPrimario);
 	cursor: default;
 	-webkit-user-select: none;
@@ -86,6 +91,89 @@
 	margin-right: .3em;
 }
 
-.contenedor .contenido .content .info{
-	width: 60%;
+.contenedor .contenido .content.isopado{
+	width: 50%;
 }
+
+.contenedor .contenido .content.tipoPermiso{
+	width: 50%;
+}
+
+.contenedor .contenido .content.enfermedad{
+	width: 100%;
+}
+
+.contenedor .contenido .content.detalle{
+	width: 100%;
+	padding: 3% 5%;
+}
+
+.contenedor .contenido .content.detalle .info{
+	font-size: 100%;
+}
+
+.contenedor .contenido .content.botones{
+	width: 100%;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-CONTENIDO-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv-BOTONES-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+.contenedor .contenido .content.botones button.btn{
+	width: 45%;
+	padding: 1% 2%;
+	margin-right: 1%;
+	border-radius: 40px;
+	border: .15em solid #c6c6c6;
+	font-weight: bolder;
+	transition: .3s;
+	font-size: 100%;
+}
+
+.contenedor .contenido .content.botones button.btn.aceptar:hover{
+	background-color: var(--colorAceptar);
+}
+
+.contenedor .contenido .content.botones button.btn.rechazar:hover{
+	background-color: var(--colorRechazar);
+}
+
+.contenedor .contenido .content.botones input{
+	width: 100%;
+	font-size: 100%;
+	margin-top: .5%;
+	padding: 1% .5%;
+	outline: none;
+	border: .1em solid transparent;
+	border-radius: 20px;
+	transition: .3s;
+}
+
+.contenedor .contenido .content.botones input:focus{
+	border: .1em solid #aaaaff;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-BOTONES-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv-MEDIAS-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+@media screen and (max-width: 800px) {
+	.contenedor .contenido .content{
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1250px) {
+	.contenedor .contenido .content{
+		width: 50%;
+	}
+}
+
+/*@media screen and (min-width: 1440px) {
+	.contenedor .contenido .content{
+		width: 25%;
+	}
+}*/
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-MEDIAS-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
