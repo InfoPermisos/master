@@ -1,3 +1,13 @@
+:root{
+	--colorBordeNavBar: rgba(0,0,0.5);/*Color del borde de la barra de navegacion*/
+	--colorFondoNav: rgba(255,255,255,.5);/*Color de fondo de la barra de navegacion*/
+	--colorFondoNavScrolled: rgba(255,255,255,1);/*Color de fondo al que pasa la barra de navegacion al bajar por la pagina*/
+	--colorLetraNav: #000;/*Color de las tras de la barra de navegacion*/
+	--colorLetraNavHover: #fdc632;/*Color de las letras de la barra de navegacion al que cambia cuando se pasa el mouse por arriba*/
+	--colorFondoSidepanel: rgba(255,255,255,.6);/*Color de fondo del sidepanel, este solamente se ve cuando el ancho del dispositivo es pequeño*/
+	--colorFondoSidepanelClick: #111;/*Color de fondo del sidepanel cuando se hace click en el boton*/
+}
+
 .navBar{
 	height: 3.5em;
 	width: 100%;
@@ -6,14 +16,14 @@
 	top: 0;
 	transition: .5s;
 	z-index: 1;
-	border-bottom: 0.2em solid rgba(0,0,0.5);
+	border-bottom: 0.2em solid var(--colorBordeNavBar);
 }
 
 /*------------------------------------------------------------------------- Barra de navegacion ----*/
 
 .navBar .navContenedor{
 	float: left;
-	background-color: rgba(255,255,255,.5);
+	background-color: var(--colorFondoNav);
 	transition: .5s;
 }
 
@@ -56,23 +66,27 @@
 }
 
 .navBar.scrolled .navContenedor {
-	background-color: rgba(255,255,255,1);
+	background-color: var(--colorFondoNavScrolled);
 }
 
 .navBar.scrolled .navContenedor nav ul li{
 	padding-top: 1%;
 }
 
+.navBar.scrolled .navContenedor nav ul li a{
+	color: var(--colorLetraNav);
+}
+
 /*-- hovers navbar --*/
 .navBar .navContenedor nav ul li a:hover{
 	letter-spacing: 0.1em;
-	color: #fdc632;
+	color: var(--colorLetraNavHover);
 }
 
 /*estilo para el link en el que se encuentra*/
 .navBar .navContenedor nav ul li a.selected{
 	letter-spacing: 0.1em;
-	color: #fdc632;
+	color: var(--colorLetraNavHover);
 }
 
  /*------------------------------------------------------------------------- SIDEPANEL ----
@@ -82,7 +96,7 @@
  */
 .navBar .sidepanelContenedor{
 	float: left;
-	background-color: rgba(255,255,255,.6);
+	background-color: var(--colorFondoSidepanel);
 }
 
 .navBar .sidepanelContenedor .sidepanelNav{
@@ -99,7 +113,7 @@
 
 
 .navBar.scrolled .sidepanelContenedor {
-	background-color: rgba(255,255,255,1);
+	background-color: var(--colorFondoNav);
 }
 
 .navBar.scrolled .sidepanelContenedor .sidepanelNav img.logo{
@@ -113,7 +127,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--colorFondoSidepanelClick);
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s; 

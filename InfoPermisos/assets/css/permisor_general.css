@@ -1,3 +1,10 @@
+:root{
+	--pedidoPermiso: #fefefe; /*Color de fondo de la caja de un pedido-permiso*/
+	--botonRevisarPedido: #f0f0f0; /*Color de fondo del boton revisar pedido*/
+	--botonRevisarPedidoHover: rgba(255,255,255,1);/*Efecto del boton "revisar pedido" al pasar el mouse por arriba*/
+	--colorBordePedidoPermiso: #000000;/*Color del borde del boton pedido permiso*/
+}
+
 *{
 	box-sizing: border-box;
 	text-decoration: none;
@@ -29,7 +36,7 @@
 	width: 85%;
 	height: 25%;
 	left: 7.5%;
-	background-color: #fefefe;
+	background-color: var(--pedidoPermiso);
 	padding: 1%;
 	margin-top: 2%;
 
@@ -103,14 +110,14 @@
 .contenido .pedidoPermiso .boton{
 	float: left;
 	position: relative;
-	background-color: #f0f0f0;
+	background-color: var(--botonRevisarPedido);
 	border: none;
 	font-weight: bolder;
 	letter-spacing: 0.1em;
 	border-radius: 30px 30px 30px 30px;
 	-moz-border-radius: 30px 30px 30px 30px;
 	-webkit-border-radius: 30px 30px 30px 30px;
-	border: 0px solid #000000;
+	border: 0px solid var(--colorBordePedidoPermiso);
 	transition: .3s;
 	width: 40%;
 	height: 25%;
@@ -139,7 +146,7 @@
 */
 
 .contenido .pedidoPermiso .boton:active{
-	background-color: rgba(255,255,255,1);
+	background-color: var(--botonRevisarPedidoHover);
 	letter-spacing: 0.05em;
 }
 
@@ -154,7 +161,7 @@
 		border-radius: 30px 30px 30px 30px;
 		-moz-border-radius: 30px 30px 30px 30px;
 		-webkit-border-radius: 30px 30px 30px 30px;
-		border: 0px solid #000000;
+		border: 0px solid var(--colorBordePedidoPermiso);
 	}
 }
 
