@@ -20,6 +20,7 @@
 /************************************************************************ CONTENIDO DE LA PAGINA*/
 
 .page-wrapper{
+    flex-flow: row;
     justify-content: center;
     margin: 5em 0 10em 0;
     flex-wrap: wrap;
@@ -29,6 +30,11 @@
 
 .page-wrapper .wrapper{
     background-color: var(--fondo_1);
+    flex-flow: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+
 } 
 
 .page-wrapper .wrapper .card{
@@ -174,7 +180,7 @@
 
 @media screen and (min-width: 1080px){
     .page-wrapper .wrapper{
-        width: 80%;
+        width: 70%;
     }
 
     .page-wrapper .wrapper .card form{
@@ -184,7 +190,7 @@
         flex-wrap: wrap;
         display: flex;
         flex-flow: row wrap;
-        padding: 0 2.5% 0 2.5%;
+        padding: 0 0% 0 0%;
     }
 
     .page-wrapper .wrapper .card form .form-group{
