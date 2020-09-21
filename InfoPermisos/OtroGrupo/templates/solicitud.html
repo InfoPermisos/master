@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>Solicitud</title>
 </head>
-<body style="background-image: url({% static 'img/fondo.jpg' %}); background-size: cover; background-attachment: fixed">
+<body style="background-image: url({% static 'img/fondo_2.jpg' %}); background-size: cover; background-attachment: fixed">
+    
 
 <div class="contenedor" >       
                 
@@ -13,20 +15,20 @@
                         <form > {% csrf_token %}
                             {{form.as_p}}
 
-                          <div class="campos"> <!-- Nombre y Apellido-->
+                          <div class="campos" style=" margin-left: -6.2%"> <!-- Nombre y Apellido-->
                              <label for="full_name_id" class="control-label">Nombre y Apellido</label>
                               <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Juan Gomez">
                           </div>    
-                          <div class="campos"> <!-- ACA CAMBIAR A INTEGER-->
-                              <label for="zip_id" class="control-label">DNI</label>
+                          <div class="campos" style="margin: 10px; margin-left: -3%;"> <!-- ACA CAMBIAR A INTEGER-->
+                              <label for="zip_id" class="control-label"  >DNI</label>
                               <input type="number" class="form-control" id="zip_id" name="zip" maxlength="9" placeholder="#######">
                          </div> 
 
-                          <div class="campos"> <!-- Direccion -->
+                          <div class="campos" style="margin: 10px ; margin-left: -4.1%"> <!-- Direccion -->
                               <label for="street1_id" class="control-label">Direccion</label>
                                 <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Avenida Siempre Viva 783">
                          </div>                    
-                           <div class="campos"> <!-- Tipo de permiso -->
+                           <div class="campos" style="margin: 10px ; margin-left: -8.3%"> <!-- Tipo de permiso -->
                                <label for="state_id" class="control-label">Tipo de Permiso</label>
                               <select class="form-control" id="state_id">
                                     <option value="CA">Camitana </option>
@@ -35,10 +37,9 @@
                                     <option value="VI">Viaje</option>
                                
                                 </select>                    
-                            </div>                         
-                                           
+                            </div>                                      
                                                 
-                            <div class="formulario"> <!-- State Button -->
+                            <div class="campos" style="margin: 10px ; margin-left: -4.9%"> <!-- State Button -->
                                 <label for="state_id" class="control-label">Provincia</label>
                                 <select class="form-control" id="state_id">
                                     <option value="BA">Buenos Aires</option>
@@ -67,19 +68,25 @@
                                 </select>                    
                             </div>
 
-                            <div> <!-- Ciudad-->
+                            <div class="campos" style="margin: 10px ; margin-left: -3.5%"> <!-- Ciudad-->
                                 <label for="city_id" class="control-label">Ciudad</label>
                                 <input type="text" class="form-control" id="city_id" name="city" placeholder="Tu Ciudad">
-                            </div>                 
+                            </div>   
+
+                            <div class="campos" style="margin: 10px ; margin-left: -3.5%"> <!-- Ciudad-->
+                                <label for="city_id" class="control-label">Detalles</label>
+                                <input style=" width: 25%; height: 80px "
+                                type="text" class="form-control" rows="20" cols="40" maxlength="256" id="dt" name="detalle" <textarea placeholder = "informacion adicional"> </textarea>
+                            </div>                    
                         
-                               
-                        
-                            <div class="formulario" > <!-- Solicitud -->
+                            
+                            <div class="campos campos2" style="margin: 10px ; margin-left: -2%"> <!-- Solicitud -->
                                 <button type="submit" class="btn btn-primary">Solicitar</button>
-                            </div>     
-                            <div class="formulario" > <!-- Cancelar -->
                                 
+                            
+                                <button type="submit" class="btn btn-primary" style="margin: 10px">
                                 <a type="submit" class="btn btn-primary" href="http://127.0.0.1:8000/algo/perfil" >Cancelar</a>
+                                </button>
                                 
                             </div>     
 
@@ -117,10 +124,17 @@
             width: 100%;
             height: 10%;
             float: left;
-            text-align: center
-
-
+            text-align: center;
         }
+        .campos2{
+         
+            height: 20%;
+           
+
+
+
+
+        
         }
     </style>
 
