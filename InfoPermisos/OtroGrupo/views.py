@@ -70,3 +70,9 @@ def permisor_revision(request):
 
 def permisor_masDetalles(request):
 	return render(request, 'permisor_masDetalles.html', {})
+
+def estado(request):
+	return render(request, 'estado.html', {})
+
+def historial(request):
+	return render(request, 'historial.html', {})
