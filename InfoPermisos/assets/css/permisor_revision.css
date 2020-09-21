@@ -1,7 +1,10 @@
 :root{
-	--colorPrimario: #ff6034;
-	--colorSecundario: #ffcd3c;
-	--colorFondo: #cfcfc8;
+	--colorPrimario: #ff6034;/*Color de palabras a resaltar*/
+	--colorSecundario: #ffcd3c;/*Color de palabras a resaltar cuando se pone el mouse arriba*/
+	--colorFondoPermiso: #cfcfc8;/*Color de fondo del contenido de los permisos*/
+	--colorFondoAside: rgba(255,255,255,.5);/*Color de fondo de la barra lateral*/
+	--colorFondoBoton: #f6f6f6;/*Color de fondo del boton "Mas detalle"*/
+	--colorFondoBotonHover: #f8f8f8;/*Color de fondo del boton "Mas detalle" cuando se pasa el mouse por arriba*/	
 }
 
 *{
@@ -28,7 +31,7 @@
 .contenido .opciones{
 	width: 15%;
 	height: 100%;
-	background-color: rgba(255,255,255,.5);
+	background-color: var(--colorFondoAside);
 	display: flex;
 	flex-wrap: wrap;
 	text-align: center;
@@ -93,7 +96,7 @@
 	-moz-border-radius: 25px 25px 25px 25px;
 	-webkit-border-radius: 25px 25px 25px 25px;
 	border: 0px solid #000000;
-	background-color: var(--colorFondo);
+	background-color: var(--colorFondoPermiso);
 }
 
 /*************************************************************************** DETALLE*/
@@ -161,7 +164,7 @@
 	height: 100%;
 	position: relative;
 	top: 10%;
-	background-color: #f6f6f6;
+	background-color: var(--colorFondoBoton);
 	color: #000;
 	font-weight: bolder;
 	font-size: 1.2em;
@@ -176,7 +179,7 @@
 }
 
 .contenido .contenedorPermisos .permisoBox .informacion .boton .btn:hover{
-	background-color: #f8f8f8;
+	background-color: var(--colorFondoBotonHover);
 	top: 0;
 	letter-spacing: .07rem;
 }
