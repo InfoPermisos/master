@@ -24,7 +24,7 @@
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
       <div class="main_menu">
-        <div class="search_input" id="search_input_box">
+        <!-- <div class="search_input" id="search_input_box"> -->
           <div class="container">
             <form class="d-flex justify-content-between" method="" action="">
               <!--<input
@@ -65,7 +65,7 @@
             >
               <ul class="nav navbar-nav menu_nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about-us.html">¿Quienes somos?</a>
@@ -221,92 +221,95 @@
         </div>
       </div>
 
+      <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><!-- <span class="flaticon-student"></span> --></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Fase 1</h4>
+                <h4 class="mt-2 mb-2">Aislamiento estricto</h4>
+                <p>
+                  <p><strong>Autorizados: </strong>Solo servicios esenciales</p>
+                  <p><strong>Prohibiciones: </strong> Todo el resto</p>
+                  <p><strong>Movilidad de la poblacion: </strong> Hasta el 10%</p>
+                  <p><strong>Tiempo de duplicacion de los casos:</strong> Menos de 5 días</p>
+                  <p><strong>Geografico:</strong> Homogéneo</p>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><!-- <span class="flaticon-student"> --></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Fase 2: </h4>
+                <h4 class="mt-2 mb-2"> aislamiento administrativo</h4>
+                <p>
+                  <p><strong>Autorizados: </strong>nuevas autorizaciones</p>
+                  <p><strong>Prohibiciones:</strong>prohibiciones nacionales</p> 
+                  <p><strong>Movilidad de la población:</strong> hasta el 25%</p>
+                  <p><strong>Tiempo de duplicación de los casos:</strong> de 5 a 15 días</p>
+                  <p><strong>Geográfico: </strong>excepciones nacionales</p>
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <div id="section1">
-      <h1>Fase 1: Aislamiento estricto</h1>
-      <h2>Autorizados</h2>
-      <p>Solo servicios esenciales</p> 
+          <!-- <div class="row"> -->
+          <div class="col-lg-6 col-md-7">
+            <div class="single_feature">
+              <div class="icon"><!-- <span class="flaticon-student"></span> --></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Fase 3: </h4>
+                <h4 class="mt-2 mb-2">segmentación geográfica</h4>
+                <p>
+                  <p><strong>Autorizados: </strong>excepciones provinciales</p>
+                  <p><strong>Prohibiciones: </strong>prohibiciones nacionales</p>
+                  <p><strong>Movilidad de la población:</strong>hasta el 50%</p> 
+                  <p><strong>Tiempo de duplicación de los casos:</strong>15 a 25 días</p> 
+                  <p><strong>Geográfico: </strong>segmentación por criterio epidemiológico</p> 
+                </p>
+              </div>
+            </div>
+          </div>
 
-	  <h2>Prohibiciones:</h2> 
-	  <p>Todo el resto</p>
-
-      <h2>Movilidad de la poblacion:</h2> 
-      <p>Hasta el 10%</p>
-
-      <h2>Tiempo de duplicacion de los casos</h2> 
-      <p>Menos de 5 días</p>
-      <h2>Geografico:</h2> 
-      <p>Homogéneo</p>
-
-
-      <div id="section2">
-      <h1>Fase 2: Aislamiento administrativo</h1>
-      <h2>Autorizados</h2> 
-      <p>Nuevas autorizaciones</p>
-
-	  <h2>Prohibiciones:</h2> 
-	  <p>Prohibiciones nacionales</p>
-
-      <h2>Movilidad de la poblacion:</h2> 
-      <p>Hasta el 25%</p>
-
-      <h2>Tiempo de duplicacion de los casos</h2> 
-      <p>5 a 15 días</p>
-
-      <h2>Geografico:</h2> 
-      <p>Excepciones nacionales</p>
-
-      <div id="section3">
-
-      <h1>Fase 3: Segmentación geográfica </h1>
-      <p>Excepciones provinciales</p>
-      <h2>Autorizados</h2>
-      <p>Prohibiciones nacionales</p> 
-
-	  <h2>Prohibiciones:</h2> 
-	  <p>Hasta el 50%</p>
-
-      <h2>Movilidad de la poblacion:</h2> 
-      <p>15 a 25 días</p>
-
-      <h2>Tiempo de duplicacion de los casos</h2> 
-      <p></p>
-
-      <h2>Geografico:</h2> 
-      <p>Segmentación por criterio epidemiológico</p>
-
-      <div id="section4">
-      <h1>Fase 4: Reapertura progresiva</h1>
-      <h2>Autorizados</h2> 
-      <p>Excepciones provinciales</p>
-
-	  <h2>Prohibiciones:</h2> 
-	  <p>Prohibiciones nacionales</p>
-
-      <h2>Movilidad de la poblacion:</h2> 
-      <p>Hasta el 75%</p>
-
-      <h2>Tiempo de duplicacion de los casos</h2> 
-      <p>Más de 25 días</p>
-
-      <h2>Geografico:</h2> 
-      <p>Restricciones locales</p>
+      <div class="col-lg-6 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><!-- <span class="flaticon-student"> --></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Fase 4: </h4>
+                <h4 class="mt-2 mb-2">reapertura progresiva </h4>
+                <p>
+                  <p><strong>Autorizados:</strong>excepciones provinciales</p> 
+                  <p><strong>Prohibiciones: </strong>prohibiciones nacionales</p>
+                  <p><strong>Movilidad de la población: </strong>hasta el 75%</p>
+                  <p><strong>Tiempo de duplicación de los casos: </strong>más de 25 días</p> 
+                  <p><strong>Geográfico: </strong>restricciones locales</p> 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div id="section5">
-      <h1>Fase 5: Nueva normalidad</h1>
-      <h2>Autorizados</h2> 
-      <p>Con hábitos de higiene y cuidado sostenido</p>
-	  <h2>Prohibiciones:</h2> 
-	  <p></p>
-      <h2>Movilidad de la poblacion:</h2> 
-      <p>Más del 75%</p>
-      <h2>Tiempo de duplicacion de los casos</h2> 
-      <p></p>
-      <h2>Geografico:</h2> 
-      <p>Homogéneo</p>
+      <div class="row">
+          <div class="col-lg-6 col-md-6" >
+            <div class="single_feature fase5" >
+              <!-- <div class="icon"><span class="flaticon-earth"></span></div> -->
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Fase 5: </h4>
+                <h4 class="mt-2 mb-2">nueva normalidad</h4>
+                <p>
+                  <p><strong>Autorizados: </strong>con hábitos de higiene y ciudado   sostenido</p>
+                  <p><strong>Prohibiciones:</strong> - </p>
+                  <p><strong>Movilidad de la población: </strong>hasta el 75%</p>
+                  <p><strong>Tiempo de duplicación de los casos:</strong> - </p>
+                  <p><strong>Geográfico: </strong>homogéneo</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
 
 
 
@@ -334,4 +337,5 @@
 
     
   </body>
+
 </html>

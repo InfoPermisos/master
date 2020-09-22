@@ -180,7 +180,7 @@
 
 @media screen and (min-width: 1080px){
     .page-wrapper .wrapper{
-        width: 70%;
+        width: 65%;
     }
 
     .page-wrapper .wrapper .card form{
@@ -262,17 +262,17 @@
 
 @media screen and (max-height: 700px){
     .page-wrapper .wrapper .card form .form-group label{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .page-wrapper .wrapper .card form .form-group .controls .form-control{
-        font-size: 1.2rem;
+        font-size: 1rem;
     } 
 
 }
 
 @media screen and (min-height: 700px){
     .page-wrapper .wrapper .card form .form-group label{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .page-wrapper .wrapper .card form .form-group .controls .form-control{
         font-size: 1.5rem;
