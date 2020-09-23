@@ -228,8 +228,11 @@ img {
     height: 20%; 
     position: center; 
 }
-.contenedor{
-    width: 500px;
+#logo_NavBar{
+    max-width: 450px;
+    /*width: 200px; */
+    /*height: 38px; */
+    float: left;
 }
 
 svg {

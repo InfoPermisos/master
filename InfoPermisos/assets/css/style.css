@@ -1747,16 +1747,16 @@ button:focus {
   .success:before {
     background: #2ebccd; }
 
-.info {
+/*.info {
   background: #38a4ff; }
   .info:before {
     background: #298cdf; }
-
-.warning {
+*/
+./*warning {
   background: #f4e700; }
   .warning:before {
     background: #e1d608; }
-
+*/
 .danger {
   background: #f54940; }
   .danger:before {
