@@ -195,6 +195,10 @@
 </html>
 
 <style type="text/css">
+  *{
+    transition: .3s;
+  }
+
   .contenedor{
             width: 100%;
             height: 500px;
@@ -223,4 +227,19 @@
          
             height: 20%;
         }
+
+        label{
+          color: #000;
+          font-weight: bolder;
+        }
+
+        * input{
+          border: .05em solid transparent;
+          transition: .5s;
+        }
+
+        * input:active{
+          border: .05em solid #6666ff;
+        }
+
 </style>
