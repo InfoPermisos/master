@@ -3,52 +3,78 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="{% static 'img/logo_2.png' %}" type="image/png" />
 	<title>InfoPermisos</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/permisor_general.css' %}">
-	<link rel="stylesheet" href="{% static 'css/navBar.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'css/navBar.css' %}"> -->
+	<!--  -->
+	<link rel="stylesheet" href="{% static '/css/bootstrap.css' %}" />
+	<link rel="stylesheet" href="{% static '/css/style_navBar_Permisor_gral.css' %}" />
+	<!--  -->
 	<meta charset=utf-8>
 	<meta name=description content="">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 </head>
-<body style="background-image: url({% static 'img/fondo_6.png' %}); background-attachment: fixed;">
+<body style="background-image: url({% static 'img/fondo_7.jpg' %}); background-attachment: fixed;">
 
-	<div class="navBar" id="navBar">
-		<!-- 
-			Diseño responsive, esta parte se ve solamente cuando el dispositivo en donde se presenta la pagina
-			es muy pequeño y oculta la barra de navegacion normal 
-		-->
-		<div class="sidepanelContenedor">
-			
-			<div id="sidepanel" class="sidepanel">
-			  <a href="javascript:void(0)" class="cerrarSidebar" onclick="closeNav()">&times;</a>
-			  <a href="#">Revisar permisos</a>
-			  <a class="selected" href="#">Buscar permisos</a>
-			  <a href="#">Buscar ciudadano</a>
-			  <a href="#">Salir</a>
-			</div>
-			<div class="sidepanelNav">
-				<img src="{% static 'img/logo2.png' %}" alt="InfoPermisos" class="logo">
-				<button class="abrirSidebar" onclick="openNav()">&#9776;</button>
-			</div>
-		
-		</div>
-		<!-- 
-			Barra de navegacion default
-		-->
-		<div class="navContenedor">
-			
-			<nav class="">
-			    <ul>
-			        <li><a href="#">Permisos a revisar</a></li><!--
-			     --><li><a class="selected" href="#">Buscar permisos</a></li><!--
-			     --><li><a href="#">Buscar ciudadano</a></li><!--
-			     --><li><a href="#">Cerrar sesion</a></li>
-			    </ul>
-			</nav>
+<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+      <div class="main_menu">
+        
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              
+            </form>
+          </div>
+        </div>
 
-		</div>
-
-	</div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="{% url 'home' %}"
+              ><img  id= "logo_NavBar" src="{% static 'img/logo2.png' %}" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="">Revisar permisos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Buscar permisos</a>
+                </li>
+                
+                
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Buscar ciudadano</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Volver</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+<!--================ End Header Menu Area =================-->
 	
 	<!-- Contenido de la pagina -->
 	<div class="contenido">
@@ -65,7 +91,7 @@
 					<h2>Detalle</h2>
 				</div>
 				<div class="content detalleCont">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Asperiores praesentium provident nobis sapiente architecto unde repudiandae dicta. Accusamus magnam blanditiis aliquam debitis error, iure temporibus provident tempora, repudiandae, incidunt cupiditate!
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  
 				</div>	
 			</div>
 			<!-- 

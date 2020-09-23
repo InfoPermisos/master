@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,17 +6,101 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" href="{% static 'img/logo_2.png' %}" type="image/png" />
+    <title>Info Permisos</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/themify-icons.css' %}" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
 
     <title>Perfil</title>
   </head>
-  <body>
-    <!-- Nav bar -->
+  <body style="background-image: url({% static 'img/fondo_2.jpg' %}); background-size: cover; background-attachment: fixed">
+    <header class="header_area">
+      <div class="main_menu">
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              
+            </form>
+          </div>
+        </div>
 
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="{% url 'home' %}"
+              ><img  id= "logo_NavBar" src="{% static 'img/logo2.png' %}" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">¿Quienes somos?</a>
+                </li>
+                
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Permisos</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Salir a correr</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Cruzar el puente</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Visitar a eña</a
+                      >
+                    </li>
 
-    <!-- End Nav bar -->
-    <h1>Interfaz del usuario solicitante</h1>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Ingresar</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Volver</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!--================ End Header Menu Area =================-->
+    <!-- <h1>Interfaz del usuario solicitante</h1> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

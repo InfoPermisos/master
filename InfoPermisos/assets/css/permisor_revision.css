@@ -7,6 +7,8 @@
 	--colorFondoBotonHover: #f8f8f8;/*Color de fondo del boton "Mas detalle" cuando se pasa el mouse por arriba*/	
 }
 
+
+
 *{
 	box-sizing: border-box;
 	text-decoration: none;
@@ -18,6 +20,8 @@
 	outline: none;
 	color: #000;
 }
+
+
 /******************************************************************************************* CONTENIDO*/
 .contenido{
 	width: 100%; 
@@ -98,6 +102,8 @@
 	border: 0px solid #000000;
 	background-color: var(--colorFondoPermiso);
 }
+
+
 
 /*************************************************************************** DETALLE*/
 

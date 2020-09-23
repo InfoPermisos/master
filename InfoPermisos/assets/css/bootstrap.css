@@ -237,9 +237,11 @@ figure {
 
 
 }
-.contenedor{
-    width: 500px;
-}
+/*.contenedor{
+    width: 30px;
+}*/
+
+
 
 svg {
     overflow: hidden;
@@ -1919,7 +1921,7 @@ pre code {
     border: 0
 }
 
-.form-control {
+/*.form-control {
     display: block;
     width: 100%;
     height: calc(2.25rem + 2px);
@@ -1932,7 +1934,7 @@ pre code {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
-}
+}*/
 
 @media screen and (prefers-reduced-motion:reduce) {
     .form-control {
@@ -4210,15 +4212,6 @@ input[type=submit].btn-block {
     justify-content: space-between
 }
 
-.navbar-brand {
-    display: inline-block;
-    padding-top: .3125rem;
-    padding-bottom: .3125rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap
-}
 
 .navbar-brand:focus,
 .navbar-brand:hover {
