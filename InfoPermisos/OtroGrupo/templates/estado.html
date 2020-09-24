@@ -14,33 +14,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--  -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/themify-icons.css' %}" />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
+  <!--  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 </head >
-<body style="background-image: url({% static 'img/fondo.jpg' %}); background-size: cover; background-attachment: fixed">
+<body style="background-image: url({% static 'img/fondo_1.jpg' %}); background-size: cover; background-attachment: fixed">
+<!--================ Start Header Menu Area =================-->
+  <header class="header_area">
+      <div class="main_menu">
+        
+          <div class="container">
+            <form class="d-flex justify-content-between" method="" action="">
+              
+            </form>
+          </div>
+        </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>BIENVENIDO: {{request.user.username}} </h1>
-  <p>Gestiona tus permisos de circulación</p> 
-</div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="{% url 'home' %}"
+              ><img  id= "logo_NavBar" src="{% static 'img/logo2.png' %}" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Solicitar Permisos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us.html">Ver estado del Permiso</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Historial</a>
+                </li>
+                
+                <li class="nav-item submenu dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >BIENVENIDO: {{request.user.username}}</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a class="nav-link" href="blog.html">Ver Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Cerrar sesion</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="single-blog.html"
+                        >Visitar a eña</a
+                      >
+                    </li>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="http://127.0.0.1:8000/algo/home">Salir</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="http://127.0.0.1:8000/algo/solicitud">Solicitar Permiso</a></li>
-        <li><a href="#">Ver estado del permiso</a></li>
-        <li><a href="#">Historial</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+                  </ul>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Volver</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+<!--================ End Header Menu Area =================-->
+
+
+</body>

@@ -107,12 +107,12 @@ body .volverContenedor .volver{
 	width: 100%;
 	padding: 2.5% 0 2.5% 0;
 	display: flex;
-	flex-flow: row;
+	flex-flow: column;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.content .box .formularioContenedor form .input-form{
+.content .box .formularioContenedor form input{
 	width: 80%;
 	height: 33%;
 	margin-top: 2%;
@@ -171,7 +171,7 @@ body .volver:hover{
 	top: 0%;
 }
 
-.content .box .formularioContenedor form .input-form:focus{
+.content .box .formularioContenedor form input:focus{
 	border: .1em solid #ccccff;
 }
 
