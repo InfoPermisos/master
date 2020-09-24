@@ -1,28 +1,23 @@
 from django.db import models
-
-class Usuario(models.Model):
-    dni = models.IntegerField(primary_key = True)
-    nombre = models.CharField(max_length = 100)
-    apellido = models.CharField(max_length = 100)
-    email = models.EmailField(max_length = 254)
-    clave = models.CharField(max_length = 100)
-
+from django.contrib.auth.models import User
 
 class Ciudadano(models.Model):
-    id = models.IntegerField(primary_key=True)
-    dniId = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    fechaNacimiento = models.DateTimeField(blank = True)
-    ciudad = models.CharField(max_length = 126)
-    empleo = models.CharField(max_length = 126)
-    enfermedades = models.CharField(max_length = 126)
-    isopado = models.BooleanField()
-    fechaIsopado = models.DateTimeField(blank = True, null = True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    email = models.EmailField('Email', blank=True, null = False)
+    first_name = models.CharField('Nombre', max_length=100, blank = True, null = True)
+    last_name = models.CharField('Apellido', max_length=100, blank = True, null = True)
+    dni = models.IntegerField('DNI', primary_key=True, null = False)
+    fecha_nacimiento = models.DateTimeField('Fecha de nacimiento', blank = True, null = True)
+    genero = models.CharField('Género', max_length = 20, null = True)
+    ciudad = models.CharField('Ciudad',max_length = 126, null = True)
+    empleo = models.CharField('Empleo',max_length = 126, null = True)
+    enfermedades = models.CharField('Enfermedades',max_length = 126, null = True)
+    isopado = models.BooleanField('Isopado', null = True)
+    fecha_isopado = models.DateTimeField('Fecha de isopado', null = True)
 
-
-class Administrador(models.Model):
-    id = models.IntegerField(primary_key=True)
-    dniId = models.ForeignKey(Usuario, on_delete = models.CASCADE)
-
+    def __str__(self):
+        return f'Solicitante {self.first_name}, {self.last_name}'
+        
 
 class Permiso(models.Model):
     #Opciones para crear model que solo acepte estos tipos
@@ -41,9 +36,12 @@ class Permiso(models.Model):
         ]
     #Model
     id = models.IntegerField(primary_key = True)
-    ciudadanoId = models.ForeignKey(Ciudadano, on_delete = models.CASCADE)
-    administradorId = models.ForeignKey(Administrador, on_delete = models.CASCADE, blank=True)
-    tipoPermiso = models.CharField(max_length=15, choices = choices_tipoPermiso)
+    user = models.OneToOneField(Ciudadano, on_delete=models.CASCADE)
+    administrador_id = models.OneToOneField(User, on_delete = models.CASCADE, blank=True)
+    tipo_permiso = models.CharField(max_length=15, choices = choices_tipoPermiso)
     estado = models.CharField(max_length = 20, choices = choices_estado, default = 'sinAdmin')
     detalle = models.CharField(max_length = 256, blank = True, null = True)
     motivo = models.CharField(max_length = 256, blank = True, null = True)
+
+    def __str__(self):
+        return f'Permiso: {self.tipo_permiso}'

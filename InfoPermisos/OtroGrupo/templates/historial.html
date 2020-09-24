@@ -18,9 +18,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 </head >
-<body style="background-image: url({% static 'img/fondo.jpg' %}); background-size: cover; background-attachment: fixed">
+<body style="background-image: url({% static 'img/fondo_1.jpg' %}); background-size: cover; background-attachment: fixed">
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div class="jumbotron text-center" style="background-image: url({% static 'img/panoramica1.jpg' %});margin-bottom:0">
   <h1>BIENVENIDO: {{request.user.username}} </h1>
   <p>Gestiona tus permisos de circulación</p> 
 </div>
@@ -38,8 +38,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="http://127.0.0.1:8000/algo/solicitud">Solicitar Permiso</a></li>
-        <li><a href="#">Ver estado del permiso</a></li>
-        <li><a href="#">Historial</a></li>
+        <li><a href="http://127.0.0.1:8000/algo/estado">Ver estado del permiso</a></li>
+        <li><a href="http://127.0.0.1:8000/algo/historial">Historial</a></li>
       </ul>
     </div>
   </div>

@@ -22,10 +22,10 @@
 			
 			<div id="sidepanel" class="sidepanel">
 			  <a href="javascript:void(0)" class="cerrarSidebar" onclick="closeNav()">&times;</a>
-			  <a class="selected" href="#">Revisar permisos</a>
-			  <a href="#">Buscar permisos</a>
+			  <a class="selected" href="https://infopermisos.herokuapp.com/permisor/revision/">Revisar permisos</a>
+			  <a href="https://infopermisos.herokuapp.com/permisor">Buscar permisos</a>
 			  <!--<a href="#">Buscar ciudadano</a>-->
-			  <a href="#">Salir</a>
+			  <a href="">Salir</a>
 			</div>
 			<div class="sidepanelNav">
 				<img src="{% static 'img/logo2.png' %}" alt="InfoPermisos" class="logo">
@@ -40,10 +40,10 @@
 			
 			<nav class="">
 			    <ul>
-			        <li><a class="selected" href="#">Permisos a revisar</a></li><!--
-			     --><li><a  href="#">Buscar permisos</a></li><!--
+			        <li><a class="selected" href="https://infopermisos.herokuapp.com/permisor/revision/">Permisos a revisar</a></li><!--
+			     --><li><a  href="https://infopermisos.herokuapp.com/permisor">Buscar permisos</a></li><!--
 			     --><!--<li><a href="#">Buscar ciudadano</a></li>--><!--
-			     --><li><a href="#">Cerrar sesion</a></li>
+			     --><li><a href="{% url 'home' %}">Volver</a></li>
 			    </ul>
 			</nav>
 

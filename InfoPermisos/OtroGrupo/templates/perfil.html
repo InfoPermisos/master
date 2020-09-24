@@ -1,111 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="icon" href="{% static 'img/logo_2.png' %}" type="image/png" />
-    <title>Info Permisos</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="{% static 'home/css/flaticon.css' %}" />
-    <link rel="stylesheet" href="{% static 'home/css/themify-icons.css' %}" />
-
-    <!-- main css -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
-
+    {% block title %}
     <title>Perfil</title>
+    {% endblock %}
   </head>
-  <body style="background-image: url({% static 'img/fondo_2.jpg' %}); background-size: cover; background-attachment: fixed">
-    <header class="header_area">
-      <div class="main_menu">
-          <div class="container">
-            <form class="d-flex justify-content-between" method="" action="">
-              
-            </form>
-          </div>
-        </div>
+  <body>
+    <!DOCTYPE html>
+<html lang="es">
+<head  >
+  <title>Perfil de usuario</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head >
+<body style="background-image: url({% static 'img/fondo_1.jpg' %}); background-size: cover; background-attachment: fixed">
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <a class="navbar-brand logo_h" href="{% url 'home' %}"
-              ><img  id= "logo_NavBar" src="{% static 'img/logo2.png' %}" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- -->
-            <div
-              class="collapse navbar-collapse offset"
-              id="navbarSupportedContent"
-            >
-              <ul class="nav navbar-nav menu_nav ml-auto">
-                <!-- <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about-us.html">¿Quienes somos?</a>
-                </li>
-                
-                <li class="nav-item submenu dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    >Permisos</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a class="nav-link" href="blog.html">Salir a correr</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="single-blog.html"
-                        >Cruzar el puente</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="single-blog.html"
-                        >Visitar a eña</a
-                      >
-                    </li>
+<div class="jumbotron text-center" style="background-image: url({% static 'img/panoramica1.jpg' %});margin-bottom:0">
+  <h1>BIENVENIDO {{request.user.username}} </h1>
+  <p>Gestiona tus permisos de circulación</p> 
+</div>
 
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Ingresar</a>
-                </li> -->
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'home' %}">Volver</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    
-    <!--================ End Header Menu Area =================-->
-    <!-- <h1>Interfaz del usuario solicitante</h1> -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://127.0.0.1:8000/algo/home">Salir</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://127.0.0.1:8000/algo/solicitud">Solicitar Permiso</a></li>
+        <li><a href="#">Ver estado del permiso</a></li>
+        <li><a href="#">Historial</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Mantene actualizados tus datos</h2>
+      <a href="{% url 'perfil_form' %}"> <img src="{% static 'img/runner.jpg' %}"style="width: 90%; height: 60%; position: relative; float: left" ></a>
+      <p>Ingresa a la imagen de arriba para actualizar tus datos personales. </p>
+      <h3>Completa tus datos</h3>
+      <p>Links que pueden interesarte.</p>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="https://www.who.int/es">Organización Mundial de la Salud en Español</a></li>
+        <li class="active"><a href="https://www.argentina.gob.ar/ ">Argentina.Gob</a></li>
+        <li class="active"><a href="https://chaco.gov.ar/informatorio/">Informatorio Chaco</a></li>
+      </ul>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+    <div class="col-sm-8">
+      <h1>Solicita tu permiso ingresando a la imagen</h1>
+      <h5>Ingresá a la imagen para gestionar tu permiso.</h5>
+      <a href="http://127.0.0.1:8000/algo/solicitud"> <img src="{% static 'img/logo_1.png' %}"style="width: 90%; height: 60%; position: relative; float: right" > </a>
+ 
+      
+      <br>
+      
+    </div>
+  </div>
+</div>
+{% endblock %}
+<div class="jumbotron text-center" style="margin-bottom:0">
+  
+   <img src="{% static 'img/logo-fut.png' %}"style="width: 45%; height: 30%; position: relative; float: center " > </a>
+</div>
+
+</body>
+</html>
   </body>
 </html>
